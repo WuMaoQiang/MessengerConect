@@ -66,6 +66,7 @@ public class MyService extends Service {
     @Override
     public void onCreate() {
         Log.i("DemoLog", "MyService -> onCreate");
+
         super.onCreate();
     }
 

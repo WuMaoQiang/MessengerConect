@@ -1,7 +1,9 @@
 package com.messenger;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
@@ -16,6 +18,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.List;
+
+import static android.content.ContentValues.TAG;
 
 public class MainActivity extends Activity implements Button.OnClickListener {
 
@@ -63,6 +69,7 @@ public class MainActivity extends Activity implements Button.OnClickListener {
         }
     }
 
+
     private ServiceConnection conn = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder binder) {
@@ -108,6 +115,7 @@ public class MainActivity extends Activity implements Button.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
+
     }
 
     @Override
