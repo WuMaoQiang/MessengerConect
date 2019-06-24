@@ -27,6 +27,7 @@
         <service
             android:name=".MyService"
             android:enabled="true"
+            android:process="com.messenger.remote"
             android:exported="true" >
             <intent-filter>
                 <action android:name="com.ispring2.action.MYSERVICE" />
