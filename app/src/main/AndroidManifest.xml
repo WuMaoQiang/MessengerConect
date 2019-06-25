@@ -9,33 +9,45 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".AIDLActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity">
 
-        <service android:name=".server.MessengerService" android:enabled="true" android:exported="true">
+        </activity>
+
+        <service
+            android:name=".server.MessengerService"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
-                <action android:name="com.itszt.lww"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.itszt.lww" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
 
         <service
             android:name=".MyService"
             android:enabled="true"
-            android:process="com.messenger.remote"
-            android:exported="true" >
+            android:exported="true"
+            android:process="com.messenger.remote">
             <intent-filter>
                 <action android:name="com.ispring2.action.MYSERVICE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
 
-
+        <service
+            android:name=".aidlPackage.MyServiceAIDL"
+            android:process="com.messenger.remote">
+            <intent-filter>
+                <action android:name="com.messenger.aidlPackage.MyServiceAIDL" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
