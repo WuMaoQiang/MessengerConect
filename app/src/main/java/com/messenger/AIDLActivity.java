@@ -41,6 +41,7 @@ public class AIDLActivity extends Activity {
     private TextView mTvData;
     private Button mButton;
     private Button mUnbind;
+    private Button mButton2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -71,5 +72,12 @@ public class AIDLActivity extends Activity {
             }
         });
 
+        mButton2 = (Button) findViewById(R.id.button2);
+        mButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }
