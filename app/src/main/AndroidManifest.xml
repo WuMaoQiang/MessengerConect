@@ -19,6 +19,14 @@
         <activity android:name=".MainActivity">
 
         </activity>
+        <activity android:name=".roomtest.RoomTestActivity">
+            <intent-filter>
+                <action android:name="com.canvassdk.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
 
         <service
             android:name=".server.MessengerService"

@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.messenger.roomtest.RoomTestActivity;
+
 import aidl.MyAIDLService;
 
 /**
@@ -42,6 +44,7 @@ public class AIDLActivity extends Activity {
     private Button mButton;
     private Button mUnbind;
     private Button mButton2;
+    private Button button10;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -77,6 +80,15 @@ public class AIDLActivity extends Activity {
             @Override
             public void onClick(View v) {
 
+            }
+        });
+        button10 = (Button) findViewById(R.id.button10);
+        button10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent("com.canvassdk.action.MAIN");
+                intent.setClassName("com.messenger","com.messenger.roomtest.RoomTestActivity");
+                startActivity(intent);
             }
         });
     }
